@@ -1,18 +1,14 @@
-# Abstract factory
-## Overview
-The Abstract Factory is a creational design pattern that allows you to produce families of related objects without specifying their concrete classes. This pattern is particularly useful when the system needs to be independent of how its objects are created, composed, and represented.
 
-## Key Concepts
-- Creational Design Pattern: Focuses on object creation mechanisms.
-- Families of Related Objects: Produces sets of objects that are designed to work together.
-- Decoupling: Clients are decoupled from the specific classes of objects they create, enhancing flexibility and maintainability.
-## Benefits
-- Encapsulation of Object Creation: Hides the details of object creation from the client.
-- Increased Flexibility: Easily switch between different families of objects.
-- Consistency: Ensures that objects created within a family are compatible.
+# Factory method
+
+## Overview
+Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes.
+
 ## Components
-- Abstract Factory: Declares an interface for creating abstract products.
-- Concrete Factory: Implements the abstract factory interface to create concrete products.
-- Abstract Product: Declares an interface for a type of product.
-- Concrete Product: Implements the abstract product interface.
-- App: Uses only the factories that implements by the abstract factory interfaces.
+- **Abstract Products**: declare interfaces for a set of distinct but related products which make up a product family.
+
+- **Concrete Products**: are various implementations of abstract products, grouped by variants. Each abstract product (chair/sofa) must be implemented in all given variants (Victorian/Modern).
+
+- **Abstract Factory**: an interface declares a set of methods for creating each of the abstract products.
+
+- **Concrete Factories**: implement creation methods of the abstract factory. Each concrete factory corresponds to a specific variant of products and creates only those product variants.
